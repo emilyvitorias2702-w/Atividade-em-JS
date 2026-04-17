@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade em Java</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+ 
+<h1>1.Teste de Cadastro</h1>
+ 
+<button onclick="
+ 
+function cadastrar() {
+    let nome1 = prompt('Digite o nome 1');
+    let nome2 = prompt('Digite o nome 2');
+    let nome3 = prompt('Digite o nome 3');
+ 
+    let lista =
+        '1 - ' + nome1 + '\n' +
+        '2 - ' + nome2 + '\n' +
+        '3 - ' + nome3;
+ 
+    alert(lista);
+}
+ 
+cadastrar();
+ 
+">Cadastrar Nomes</button>
+ 
+ 
+<h1>2.Verificação de Idade</h1>
+   <button onclick="
+let idade = [9, 18, 25, 30, 19];
+ 
+let texto = '';
+ 
+for(let i = 0; i < idade.length; i++){
+    texto += idade[i] + '\n';
+}
+ 
+alert(texto);
+ 
+">Mostrar idades</button>
+ 
+
+<h2>3.Quantidade de Alunos</h2>
+<button onclick="
+
+ let alunos = [ 'Maria','Davi','Emily','Lucca','Karen']
+    alert(alunos.length)
+   
+   ">Contar a quantidade</button>
+
+<h1>4.Verificação de Idade</h1>
+ 
+<script>
+function verificarIdade() {
+    const age = parseInt(prompt("Informe a sua idade"), 10);
+    if (isNaN(age)) {
+        alert("Idade inválida");
+        return;
+    }
+    if (age < 18) {
+        alert("Usuário menor de idade");
+    } else {
+        alert("Usuário maior de idade");
+    }
+}
+</script>
+<button onclick="verificarIdade()">Verificação de Idade</button>
+ 
+ 
+ 
+<h1>5.Verificação de Nota</h1>
+ 
+<script>
+function verificarNota() {
+    const nota = parseFloat(prompt("Informe a sua Nota"));
+    if (isNaN(nota)) {
+        alert("Nota inválida");
+        return;
+    }
+    if (nota < 7) {
+        alert("Aluno Reprovado");
+    } else {
+        alert("Aluno Aprovado");
+    }
+}
+</script>
+<button onclick="verificarNota()">Verificação de Nota</button>
+ 
+ 
+ 
+<h1>6.Sistema de Alunos</h1>
+ 
+<script>
+let alunos = [];
+ 
+function menu(opcao) {
+    switch (opcao) {
+        case 1:
+            let nome = prompt("Digite o nome do aluno:");
+            alunos.push(nome);
+            alert("Aluno cadastrado!");
+            break;
+ 
+        case 2:
+            alert("Lista de alunos:");
+            for (let i = 0; i < alunos.length; i++) {
+                alert(alunos[i]);
+            }
+            break;
+ 
+        case 3:
+            alert("Saindo...");
+            break;
+ 
+        default:
+            alert("Opção inválida!");
+    }
+}
+ 
+function sistemaDeAlunos() {
+    const opcao = parseInt(prompt("1-Cadastrar | 2-Listar | 3-Sair"), 10);
+    menu(opcao);
+}
+</script>
+<button onclick="sistemaDeAlunos()">Menu</button>
+ 
+ <h2>7Mostrar Produtos</h2>
+
+<script>
+function mostrarProdutos() {
+    let produtos = [];
+
+    produtos.push("Notebook");
+    produtos.push("Celular");
+    produtos.push("Mouse");
+
+    console.log("Lista de produtos:");
+    
+    for (let i = 0; i < produtos.length; i++) {
+        console.log(produtos[i]);
+    }
+}
+</script>
+ <button onclick="mostrarProdutos()">Mostrar Produtos</button>
+
+ 
+<h2>8.Veja o resultado no console</h2>
+ 
+<script>
+function imprimirArray(array) {
+    for (let i = 0; i < array.length; i++) {
+        alert(array[i]);
+    }
+}
+let lista = ["João", "Maria", "Carlos"];
+</script>
+<button onclick="imprimirArray(lista)">Ver Resultado do Console</button>
+ 
+ 
+ 
+ 
+<h2>9.Array de números e calcule </h2>
+ 
+<script>
+function somarArray() {
+    let numeros = [];
+ 
+    let quantidade = parseInt(prompt("Quantos números você quer somar?"));
+ 
+    for (let i = 0; i < quantidade; i++) {
+        let valor = Number(prompt("Digite o número " + (i + 1) + ":"));
+        numeros.push(valor);
+    }
+ 
+    let soma = 0;
+ 
+    for (let i = 0; i < numeros.length; i++) {
+        soma += numeros[i];
+    }
+ 
+    alert("Soma total: " + soma);
+}
+</script>
+ 
+<button onclick="somarArray()">Calcular números com Array</button>
+ 
+ 
+<h2>10.Cálculo da Média</h2>
+ 
+<button onclick="
+let notas = [7, 8, 9];
+let soma = 0;
+ 
+for (let i = 0; i < notas.length; i++) {
+    soma += notas[i];
+}
+ 
+let media = soma / notas.length;
+ 
+alert('Média: ' + media)
+ 
+">Calculando a Média</button>
+
+ 
+<h1>11.Situação do Aluno</h1>
+<button onclick="
+ 
+let media = prompt('Digite a média do aluno:')
+ 
+if (media >= 7) {
+    alert('Aprovado');
+} else {
+    alert('Reprovado');
+}
+ 
+">Verificar Situação</button>
+ 
+ 
+ 
+<h1>12.Lista de Nomes</h1>
+ 
+<button onclick="listarNomes()">Listar Nomes</button>
+ 
+<script>
+function listarNomes() {
+    let nomes = ['Andressa', 'Maria', 'Davi', 'Lucca'];
+    let texto = '';
+    for (let i = 0; i < nomes.length; i++) {
+        texto += i + ' - ' + nomes[i] + '\n';
+    }
+    alert(texto);
+}
+</script>
+ 
+ 
+ 
+<h1>13.Verificação do Maior de Idade</h1>
+ 
+<button onclick="
+let idades = [12, 14, 60, 16, 30, 15];
+ 
+    for (let i = 0; i < idades.length; i++) {
+        if (idades[i] >= 18) {
+            alert(idades[i]);
+        }
+    }
+">Verificar Maior de Idade</button>
+ 
+ 
+ 
+<h1>14.Classificar Cargo</h1>
+ 
+<button onclick="
+ 
+let cargo = prompt('Digite A para Admin ou U para Usuário:')
+ 
+switch (cargo) {
+    case 'A':
+        alert('Admin');
+        break;
+    case 'U':
+        alert('Usuário');
+        break;
+    default:
+        alert('Inválido');
+}
+ 
+">Verificar Cargo</button>
+ 
+ 
+<h1>15.Nomes Atualizados</h1>
+<script>
+let listaNomes = [];
+ 
+function adicionarNome() {
+    let nome = prompt('Digite um nome:');
+    listaNomes.push(nome);
+    alert(listaNomes);
+}
+</script>
+ 
+<button onclick="adicionarNome()">Adicionar Nome</button>
+ 
+ 
+<h1>16.Quantidade de Aprovados</h1>
+<button onclick="
+ 
+let notas = [5, 7, 8, 6, 10];
+let aprovados = 0;
+ 
+for (let i = 0; i < notas.length; i++) {
+    if (notas[i] >= 7) {
+        aprovados++;
+    }
+}
+ 
+alert('Aprovados: ' + aprovados);
+ 
+">Contar Aprovados</button>
+ 
+ 
+<h1>17.Sistema de Itens</h1>
+<script>
+let itens = [];
+ 
+function menu2() {
+    let opcao = prompt('1-Adicionar  2-Listar  3-Sair');
+ 
+    switch (opcao) {
+        case '1':
+            let item = prompt('Digite um item:');
+            itens.push(item);
+            alert('Item adicionado');
+            break;
+ 
+        case '2':
+            alert(itens);
+            break;
+ 
+        case '3':
+            alert('Saindo...');
+            break;
+ 
+        default:
+            alert('Opção inválida');
+    }
+}
+</script>
+ 
+<button onclick="menu2()">Abrir Menu</button>
+ 
+<h1>18.Sistema de Itens com Menu</h1>
+<button onclick="
+ 
+let pessoas = [
+    {nome: 'Emily', idade: 20},
+    {nome: 'Leticia', idade: 18}
+];
+ 
+console.table(pessoas);
+alert('Veja no console (F12)');
+ 
+">Mostrar Pessoas</button>
+ 
+ 
+<h1>19.Array de Objetos</h1>
+ 
+<button onclick="executar()">Executar</button>
+
+<script>
+function executar() {
+    let nomes = [];
+
+    for (let i = 0; i < 3; i++) {
+        let nome = prompt("Digite o nome " + (i + 1) + ":");
+        nomes.push(nome);
+    }
+    alert("Nomes cadastrados:\n" + nomes.join("\n"));
+
+    let busca = prompt("Digite um nome para buscar:");
+    let encontrado = false;
+
+    for (let i = 0; i < nomes.length; i++) {
+        if (nomes[i].toLowerCase() === busca.toLowerCase()) {
+            encontrado = true;
+            alert("Nome encontrado: " + nomes[i]);
+            break;
+        }
+    }
+
+    if (!encontrado) {
+        alert("Nome não encontrado.");
+    }
+}
+</script>
+
+ <h1>20. cadastro, listagem e média.</h1><br>
+ 
+<script>
+function iniciarSistema() {
+    let alunos = [];
+    let notas = [];
+    let opcao;
+
+    while (opcao !== 4) {
+        opcao = parseInt(prompt(
+            "MENU\n" +
+            "1 - Cadastrar aluno\n" +
+            "2 - Listar alunos\n" +
+            "3 - Ver média\n" +
+            "4 - Sair"
+        ));
+
+        switch(opcao) {
+
+            case 1:
+                let nome = prompt("Digite o nome do aluno:");
+                let nota = parseFloat(prompt("Digite a nota do aluno:"));
+
+                alunos.push(nome);
+                notas.push(nota);
+
+                alert("Aluno cadastrado com sucesso!");
+                break;
+
+            case 2:
+                if (alunos.length === 0) {
+                    alert("Nenhum aluno cadastrado.");
+                } else {
+                    let lista = "Lista de alunos:\n";
+
+                    for (let i = 0; i < alunos.length; i++) {
+                        lista += alunos[i] + " - Nota: " + notas[i] + "\n";
+                    }
+
+                    alert(lista);
+                }
+                break;
+
+            case 3:
+                if (notas.length === 0) {
+                    alert("Nenhuma nota cadastrada.");
+                } else {
+                    let soma = 0;
+
+                    for (let i = 0; i < notas.length; i++) {
+                        soma += notas[i];
+                    }
+
+                    let media = soma / notas.length;
+
+                    alert("Média da turma: " + media.toFixed(2));
+                }
+                break;
+
+            case 4:
+                alert("Saindo do sistema...");
+                break;
+
+            default:
+                alert("Opção inválida!");
+        }
+    }
+}
+</script>
+<button onclick="iniciarSistema()">Abrir Sistema</button>
+ 
+</body>
+</html>    
+ 
